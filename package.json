@@ -1,0 +1,70 @@
+{
+  "name": "broccoli-dom-filter",
+  "version": "0.0.0",
+  "description": "Broccoli plugin for manipulating HTML with jsdom.",
+  "author": "Steve Jabour <steve@jabour.me> (https://github.com/atsjj)",
+  "bugs": "https://github.com/atsjj/broccoli-dom-filter/issues",
+  "homepage": "https://github.com/atsjj/broccoli-dom-filter",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "broccoli-persistent-filter": "^2.3.1",
+    "jsdom": "^16.2.2",
+    "minimatch": "^3.0.4"
+  },
+  "devDependencies": {
+    "ava": "^3.7.0",
+    "broccoli-test-helper": "^2.0.0",
+    "sinon": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "errors.js",
+    "index.js"
+  ],
+  "keywords": [
+    "broccoli-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atsjj/broccoli-dom-filter.git"
+  },
+  "scripts": {
+    "test": "ava test.js",
+    "release": "release-it"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "issueUrl": "https://github.com/atsjj/broccoli-dom-filter/issues/{id}",
+    "package": "package.json",
+    "releaseSummary": true,
+    "template": "https://gist.githubusercontent.com/atsjj/de6998d6750a8b32778fa3380da24301/raw/66a23990c3324f03aa756e45fed70d46389c7eab/normal.hbs"
+  },
+  "release-it": {
+    "hooks": {
+      "before:init": "npm test"
+    },
+    "git": {
+      "changelog": "npx auto-changelog --stdout --template https://gist.githubusercontent.com/atsjj/de6998d6750a8b32778fa3380da24301/raw/66a23990c3324f03aa756e45fed70d46389c7eab/compact.hbs",
+      "requireCleanWorkingDir": true,
+      "requireUpstream": true,
+      "requireCommits": false,
+      "addUntrackedFiles": false,
+      "commit": true,
+      "commitMessage": "${version}",
+      "commitArgs": "--gpg-sign",
+      "tag": true,
+      "tagName": "${version}",
+      "tagAnnotation": "${version}",
+      "tagArgs": "--sign",
+      "push": true,
+      "pushArgs": "--follow-tags",
+      "pushRepo": "origin"
+    },
+    "npm": {
+      "publish": true
+    }
+  }
+}
