@@ -7,7 +7,7 @@
 [npm-badge]: https://img.shields.io/npm/v/broccoli-dom-filter.svg
 [npm-badge-url]: https://www.npmjs.com/package/broccoli-dom-filter
 [travis-badge]: https://img.shields.io/travis/atsjj/broccoli-dom-filter/master.svg?label=TravisCI
-[travis-badge-url]: https://travis-ci.org/atsjj/broccoli-dom-filter
+[travis-badge-url]: https://travis-ci.com/atsjj/broccoli-dom-filter
 [github-actions-badge]: https://github.com/atsjj/broccoli-dom-filter/workflows/CI/badge.svg
 [github-actions-ci-url]: https://github.com/atsjj/broccoli-dom-filter/actions?query=workflow%3ACI
 [persistent-filter-url]: https://github.com/broccolijs/broccoli-persistent-filter
